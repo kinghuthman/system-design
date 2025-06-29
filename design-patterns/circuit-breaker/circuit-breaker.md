@@ -6,4 +6,6 @@ The Circuit Breaker pattern helps handle faults that might take varying amounts 
 
 In a distributed environment, calls to remote resources and services can fail because of transient faults. Transient faults include overcommitted or temporarily unavailable resources, slow network connections, or time-outs. These faults typically correct themselves after a short period of time. To help manage these faults, you should design a cloud application to use a strategy, such as the [Retry pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry).
 
-Unanticipated events can
+Unanticipated events can faults that take longer to fix. These faults can range in severity from a partial loss of connectivity to a complete service failure. In these situations, an application shouldn't continually retry an operation that's unlikely to succeed. Instead, the application should quickly recognize the failed operation and handle the failure accordingly.
+
+https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker
